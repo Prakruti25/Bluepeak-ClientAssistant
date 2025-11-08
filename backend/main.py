@@ -1,5 +1,5 @@
-from fastapi import FastAPI, Request, Form
-from fastapi.responses import HTMLResponse
+from fastapi import FastAPI, Request, Form, HTTPException
+from fastapi.responses import HTMLResponse, FileResponse
 from fastapi.templating import Jinja2Templates
 
 import csv
@@ -124,3 +124,15 @@ async def dashboard(request: Request):
             "rows": rows,
         },
     )
+
+@app.get("/download")
+async def download_csv():
+    if not os.path.exists(DATA_FILE):
+        # No file yet = no leads
+        raise HTTPException(status_code=404, detail="No leads to download yet.")
+    return FileResponse(
+        DATA_FILE,
+        media_type="text/csv",
+        filename="leads.csv",
+    )
+

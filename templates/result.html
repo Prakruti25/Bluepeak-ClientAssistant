@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>BlueBot - Result</title>
+</head>
+<body>
+  <h1>Lead Result</h1>
+
+  <p>
+    Lead score:
+    <strong>{{ score }}/16 ({{ label }})</strong>
+  </p>
+
+  <h3>Summary</h3>
+  <pre>{{ summary }}</pre>
+
+  <h3>Details</h3>
+  <ul>
+    <li>Company: {{ data.company }}</li>
+    <li>Website: {{ data.website }}</li>
+    <li>Service: {{ data.service }}</li>
+    <li>Budget: {{ data.budget }}</li>
+    <li>Timeline: {{ data.timeline }}</li>
+    <li>Goal: {{ data.goal }}</li>
+    <li>Email: {{ data.email }}</li>
+    <li>Phone: {{ data.phone }}</li>
+    <li>Company size: {{ data.company_size }}</li>
+  </ul>
+
+  <a href="/">← Back to form</a>
+</body>
+</html>

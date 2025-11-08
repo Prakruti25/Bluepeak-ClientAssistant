@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>BlueBot - BluePeak Client Assistant</title>
+</head>
+<body>
+  <h1>BlueBot – BluePeak Client Assistant</h1>
+  <p>Answer a few questions and we’ll qualify your lead.</p>
+
+  <form action="/submit" method="post">
+    <label>Company name:</label><br />
+    <input type="text" name="company" required /><br /><br />
+
+    <label>Website:</label><br />
+    <input type="text" name="website" /><br /><br />
+
+    <label>What do you need most?</label><br />
+    <select name="service">
+      <option value="SEO">SEO</option>
+      <option value="Paid Ads">Paid Ads</option>
+      <option value="Content">Content</option>
+      <option value="ABM">ABM</option>
+      <option value="Other">Other</option>
+    </select><br /><br />
+
+    <label>Monthly budget:</label><br />
+    <select name="budget">
+      <option value="<2k">&lt; 2k</option>
+      <option value="2-5k">2–5k</option>
+      <option value="5-10k">5–10k</option>
+      <option value="10k+">10k+</option>
+    </select><br /><br />
+
+    <label>Timeline to start:</label><br />
+    <select name="timeline">
+      <option value="now">Now</option>
+      <option value="2-4w">2–4 weeks</option>
+      <option value="1-3m">1–3 months</option>
+    </select><br /><br />
+
+    <label>Biggest goal:</label><br />
+    <input type="text" name="goal" /><br /><br />
+
+    <label>Contact email:</label><br />
+    <input type="email" name="email" required /><br /><br />
+
+    <label>Phone (optional):</label><br />
+    <input type="text" name="phone" /><br /><br />
+
+    <label>Company size:</label><br />
+    <select name="company_size">
+      <option value="1-10">1–10</option>
+      <option value="11-50">11–50</option>
+      <option value="51-200">51–200</option>
+      <option value="200+">200+</option>
+    </select><br /><br />
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <p style="font-size: 0.8rem;">
+    By submitting, you agree BluePeak may contact you. We only store the details you enter.
+  </p>
+</body>
+</html>
